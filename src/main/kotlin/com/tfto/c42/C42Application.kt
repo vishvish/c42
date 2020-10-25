@@ -6,7 +6,7 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 @EnableConfigurationProperties(BlogProperties::class)
-open class C42Application
+class C42Application
 
 fun main(args: Array<String>) {
 	runApplication<C42Application>(*args)
