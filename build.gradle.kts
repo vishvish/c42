@@ -6,6 +6,7 @@ plugins {
 	kotlin("jvm") version "1.4.10"
 	kotlin("plugin.spring") version "1.4.10"
 	kotlin("plugin.jpa") version "1.4.10"
+	kotlin("kapt") version "1.4.10"
 }
 
 group = "com.tfto"
@@ -34,6 +35,7 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 	testImplementation("com.ninja-squad:springmockk:2.0.3")
+	kapt("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 tasks.withType<Test> {

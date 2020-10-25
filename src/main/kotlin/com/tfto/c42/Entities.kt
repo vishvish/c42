@@ -1,6 +1,7 @@
 package com.tfto.c42
 
 import java.time.LocalDateTime
+import java.time.ZonedDateTime
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
@@ -22,4 +23,10 @@ class User(
         var firstname: String,
         var lastname: String,
         var description: String? = null,
+        @Id @GeneratedValue var id: Long? = null)
+
+@Entity
+class Image(
+        var originalFileName:String,
+        var captureTime: ZonedDateTime,
         @Id @GeneratedValue var id: Long? = null)
